@@ -59,7 +59,7 @@ export default function Portfolio() {
       title: "QuizMaster – Quiz Web Application",
       description: "Built a secure full-stack quiz application with 5+ subjects and 50+ dynamic questions with real-time scoring and performance analytics.",
       technologies: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL"],
-      githubUrl: "https://github.com/shaiksadhik96/QuizMaster",
+      githubUrl: "http://localhost/quiztask/index.php",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Full Stack"
     },
@@ -68,7 +68,7 @@ export default function Portfolio() {
       title: "Travel Bucket List – Web Application",
       description: "Developed a full-stack application to manage travel destinations with image upload, notes, and visited status tracking.",
       technologies: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB"],
-      githubUrl: "https://github.com/shaiksadhik96/Travel-Bucket-List",
+      githubUrl: "https://travelbucket12.netlify.app/",
       image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Full Stack"
     },
@@ -77,7 +77,7 @@ export default function Portfolio() {
       title: "Movie Review Site – Frontend",
       description: "Built a movie site with a sleek, responsive React front-end featuring interactive animations.",
       technologies: ["React", "Tailwind CSS", "JavaScript"],
-      githubUrl: "https://github.com/shaiksadhik96/Movie-Review-Site",
+      githubUrl: "https://moviesite-bysadhik.vercel.app/",
       image: "https://uicookies.com/wp-content/uploads/2020/07/Jupiter-3.jpg",
       category: "Frontend"
     },
@@ -86,7 +86,7 @@ export default function Portfolio() {
       title: "USB Port Control Tool",
       description: "Developed a secure, responsive frontend for a USB port control tool with cybersecurity features.",
       technologies: ["HTML", "CSS", "Bootstrap", "Python"],
-      githubUrl: "#",
+      githubUrl: "https://usbphysicalsecurity-bysadhik.netlify.app/index.html",
       image: "https://media.istockphoto.com/id/1435605327/photo/cybersecurity-concept-global-network-security-technology-business-people-protect-personal.webp?a=1&b=1&s=612x612&w=0&k=20&c=Reqkqf1qILOYmckRT5y1B9pL-hZuBWl1FbXTrWnoiGw=",
       category: "Cybersecurity"
     },
@@ -95,7 +95,7 @@ export default function Portfolio() {
       title: "Portfolio Website",
       description: "Designed and developed a responsive portfolio website with modern UI/UX and animations.",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/shaiksadhik96/portfolio",
+      githubUrl: "https://sadhik-portfolio.netlify.app/",
       image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
       category: "Frontend"
     },
@@ -115,11 +115,11 @@ export default function Portfolio() {
       {/* Clean Animated Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-white"></div>
-        
+
         {/* Subtle floating shapes */}
         {[...Array(8)].map((_, i) => {
           const size = Math.random() * 60 + 30;
-          
+
           return (
             <motion.div
               key={i}
@@ -150,27 +150,27 @@ export default function Portfolio() {
       </div>
 
       {/* Header */}
-      <motion.header 
+      <motion.header
         className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-4xl"
         style={{ y, opacity }}
         ref={ref}
       >
-        <motion.div 
+        <motion.div
           className="bg-white/90 backdrop-blur-lg rounded-xl shadow-lg border border-orange-200"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
         >
           <div className="px-6 py-3 flex justify-between items-center">
-            <motion.h1 
+            <motion.h1
               className="text-xl font-bold text-orange-600"
               whileHover={{ scale: 1.05 }}
             >
               Shaik Sadhik
             </motion.h1>
-            
-            <button 
-              className="md:hidden focus:outline-none border border-orange-300 rounded-lg px-3 py-2 hover:bg-orange-50 transition-all" 
+
+            <button
+              className="md:hidden focus:outline-none border border-orange-300 rounded-lg px-3 py-2 hover:bg-orange-50 transition-all"
               onClick={toggleMenu}
             >
               <motion.div
@@ -181,23 +181,22 @@ export default function Portfolio() {
                 }}
                 transition={{ duration: 0.2 }}
               >
-                {isMenuOpen ? 
-                  <span className="block text-lg text-orange-600">×</span> : 
+                {isMenuOpen ?
+                  <span className="block text-lg text-orange-600">×</span> :
                   <span className="block text-lg text-orange-600">☰</span>
                 }
               </motion.div>
             </button>
-            
+
             <nav className="hidden md:flex space-x-1">
               {navItems.map((item, index) => (
-                <motion.a 
+                <motion.a
                   key={item.id}
                   href={`#${item.id}`}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                    activeSection === item.id 
-                      ? 'bg-orange-500 text-white shadow-md' 
-                      : 'hover:bg-orange-100 text-gray-700'
-                  }`}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all ${activeSection === item.id
+                    ? 'bg-orange-500 text-white shadow-md'
+                    : 'hover:bg-orange-100 text-gray-700'
+                    }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -206,10 +205,10 @@ export default function Portfolio() {
               ))}
             </nav>
           </div>
-          
+
           <AnimatePresence>
             {isMenuOpen && (
-              <motion.div 
+              <motion.div
                 className="md:hidden bg-white/95 backdrop-blur-lg rounded-lg m-3 p-4 shadow-lg border border-orange-200"
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
@@ -218,14 +217,13 @@ export default function Portfolio() {
               >
                 <nav className="flex flex-col space-y-2">
                   {navItems.map((item) => (
-                    <a 
+                    <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className={`px-4 py-3 rounded-lg font-medium transition-all ${
-                        activeSection === item.id 
-                          ? 'bg-orange-500 text-white' 
-                          : 'hover:bg-orange-100 text-gray-700'
-                      }`}
+                      className={`px-4 py-3 rounded-lg font-medium transition-all ${activeSection === item.id
+                        ? 'bg-orange-500 text-white'
+                        : 'hover:bg-orange-100 text-gray-700'
+                        }`}
                       onClick={toggleMenu}
                     >
                       {item.label}
@@ -237,94 +235,37 @@ export default function Portfolio() {
           </AnimatePresence>
         </motion.div>
       </motion.header>
-
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4">
+      <section
+        id="home"
+        className="min-h-screen flex items-center justify-center pt-24 pb-12 px-4 relative"
+      >
+        {/* Popup - Top between Nav and Photo */}
+        <motion.div
+          initial={{ opacity: 0, y: -20, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="absolute top-20 left-1/2 transform -translate-x-1/2 bg-green-200/80 backdrop-blur-md px-6 py-2 rounded-lg shadow-lg border border-green-300 text-green-900 font-semibold tracking-wide"
+        >
+          <motion.span
+            animate={{ opacity: [0.7, 1, 0.7] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          >
+            🌟 Welcome to my <span className="text-green-700">Portfolio</span>
+          </motion.span>
+        </motion.div>
+
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center max-w-6xl">
-          <motion.div 
-            className="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8"
+          {/* Left Side (Profile Image) */}
+          <motion.div
+            className="lg:w-1/2 flex justify-center mb-8 lg:mb-0 lg:pr-8"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-orange-200">
-              <motion.h1 
-                className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-800"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-              >
-                Cybersecurity Specialist & 
-                <span className="text-orange-600"> Full Stack Developer</span>
-              </motion.h1>
-              
-              <motion.div 
-                className="w-16 h-1 bg-orange-500 rounded mb-4"
-                initial={{ width: 0 }}
-                animate={{ width: 64 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-              />
-              
-              <motion.h2 
-                className="text-lg mb-4 text-gray-600"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-              >
-                Building secure, scalable digital solutions
-              </motion.h2>
-              
-              <motion.p 
-                className="text-base mb-6 text-gray-600 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-              >
-                Passionate Full Stack Web Developer with expertise in creating responsive web applications, 
-                developing REST APIs, and implementing cybersecurity measures.
-              </motion.p>
-              
-              <motion.div 
-                className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.6 }}
-              >
-                <motion.a 
-                  href="#contact" 
-                  className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-all inline-flex items-center justify-center shadow-md"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Contact Me
-                  <motion.span 
-                    className="ml-2"
-                    animate={{ x: [0, 3, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    →
-                  </motion.span>
-                </motion.a>
-                <motion.a 
-                  href="#projects" 
-                  className="border border-orange-500 text-orange-600 px-6 py-3 rounded-lg font-medium hover:bg-orange-50 transition-all text-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Projects
-                </motion.a>
-              </motion.div>
-            </div>
-          </motion.div>
-          
-          <motion.div 
-            className="lg:w-1/2 flex justify-center"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
             <div className="relative">
-              <motion.div 
+              {/* Glow Behind Image */}
+              <motion.div
                 className="absolute -inset-4 bg-orange-200/30 rounded-full blur-lg"
                 animate={{
                   scale: [1, 1.1, 1],
@@ -335,22 +276,104 @@ export default function Portfolio() {
                   repeat: Infinity,
                 }}
               />
-              <div className="bg-red rounded-full w-48 h-48 flex items-center justify-center overflow-hidden border-2 border-orange-300 shadow-lg relative z-10">
+
+              {/* Profile Image */}
+              <div className="bg-red w-84 h-84 flex items-center justify-center overflow-hidden border-2 border-orange-300 shadow-lg relative z-10 rounded-xl">
                 <img
-                  src="profile2.png"
+                  src="profile3.png"
                   alt="Shaik Sadhik"
                   className="object-cover w-full h-full"
                 />
               </div>
             </div>
           </motion.div>
+
+          {/* Right Side (Details) */}
+          <motion.div
+            className="lg:w-1/2 lg:pl-8"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="bg-white/70 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-orange-200">
+              <motion.h1
+                className="text-3xl lg:text-4xl font-bold mb-4 leading-tight text-gray-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                Cybersecurity Specialist &
+                <span className="text-orange-600"> Full Stack Developer</span>
+              </motion.h1>
+
+              <motion.div
+                className="w-16 h-1 bg-orange-500 rounded mb-4"
+                initial={{ width: 0 }}
+                animate={{ width: 64 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              />
+
+              <motion.h2
+                className="text-lg mb-4 text-gray-600"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 0.6 }}
+              >
+                Building secure, scalable digital solutions
+              </motion.h2>
+
+              <motion.p
+                className="text-base mb-6 text-gray-600 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                Passionate Full Stack Web Developer with expertise in creating
+                responsive web applications, developing REST APIs, and implementing
+                cybersecurity measures.
+              </motion.p>
+
+              <motion.div
+                className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.6 }}
+              >
+                <motion.a
+                  href="#contact"
+                  className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition-all inline-flex items-center justify-center shadow-md"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Contact Me
+                  <motion.span
+                    className="ml-2"
+                    animate={{ x: [0, 3, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    →
+                  </motion.span>
+                </motion.a>
+
+                <motion.a
+                  href="#projects"
+                  className="border border-orange-500 text-orange-600 px-6 py-3 rounded-lg font-medium hover:bg-orange-50 transition-all text-center"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View Projects
+                </motion.a>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="py-16 px-4 bg-orange-50/30">
         <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -360,8 +383,8 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold mb-2 text-gray-800">About Me</h2>
             <div className="w-16 h-1 bg-orange-500 mx-auto rounded"></div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-orange-200"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -389,22 +412,22 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="lg:w-2/3">
                 <p className="text-base text-gray-700 mb-4 leading-relaxed">
-                  I'm a cybersecurity-focused Computer Science student with expertise in full-stack development, 
-                  secure application design, and vulnerability assessment. My passion lies in creating robust, 
+                  I'm a cybersecurity-focused Computer Science student with expertise in full-stack development,
+                  secure application design, and vulnerability assessment. My passion lies in creating robust,
                   secure digital solutions that withstand modern cyber threats.
                 </p>
                 <p className="text-base text-gray-600 mb-4 leading-relaxed">
-                  With hands-on experience in technologies like React, Node.js, Python, and various security tools, 
+                  With hands-on experience in technologies like React, Node.js, Python, and various security tools,
                   I bridge the gap between development and security.
                 </p>
-                
+
                 <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
                   <h4 className="font-semibold text-orange-600 mb-2">Cybersecurity Intern at Supraja Technologies</h4>
                   <p className="text-gray-700 text-sm">
-                    Worked on cybersecurity projects, developing a secure frontend for a USB port control tool and 
+                    Worked on cybersecurity projects, developing a secure frontend for a USB port control tool and
                     actively participating in team discussions to deliver high-quality results.
                   </p>
                 </div>
@@ -417,7 +440,7 @@ export default function Portfolio() {
       {/* Skills Section */}
       <section id="skills" className="py-16 px-4">
         <div className="container mx-auto px-4 max-w-6xl">
-          <motion.div 
+          <motion.div
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -427,10 +450,10 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold mb-2 text-gray-800">Skills & Technologies</h2>
             <div className="w-16 h-1 bg-orange-500 mx-auto rounded"></div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Programming Languages */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -449,9 +472,9 @@ export default function Portfolio() {
                 <li className="flex items-center"><span className="text-orange-500 mr-2">•</span>JavaScript</li>
               </ul>
             </motion.div>
-            
+
             {/* Frontend */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -470,9 +493,9 @@ export default function Portfolio() {
                 <li className="flex items-center"><span className="text-orange-500 mr-2">•</span>Responsive Design</li>
               </ul>
             </motion.div>
-            
+
             {/* Backend */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -491,9 +514,9 @@ export default function Portfolio() {
                 <li className="flex items-center"><span className="text-orange-500 mr-2">•</span>Authentication</li>
               </ul>
             </motion.div>
-            
+
             {/* Database */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -512,9 +535,9 @@ export default function Portfolio() {
                 <li className="flex items-center"><span className="text-orange-500 mr-2">•</span>SQL Queries</li>
               </ul>
             </motion.div>
-            
+
             {/* Tools */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -533,9 +556,9 @@ export default function Portfolio() {
                 <li className="flex items-center"><span className="text-orange-500 mr-2">•</span>MongoDB Compass</li>
               </ul>
             </motion.div>
-            
+
             {/* Cybersecurity */}
-            <motion.div 
+            <motion.div
               className="bg-white/80 backdrop-blur-sm p-5 rounded-xl shadow-lg border border-orange-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -618,7 +641,7 @@ export default function Portfolio() {
                       whileHover={{ scale: 1.05 }}
                     >
                       <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.18 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0112 6.84c.85.01 1.71.12 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/>
+                        <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.18 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0112 6.84c.85.01 1.71.12 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z" />
                       </svg>
                       Code
                     </motion.a>
@@ -628,7 +651,7 @@ export default function Portfolio() {
                       whileHover={{ scale: 1.05 }}
                     >
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                       Demo
                     </motion.a>
@@ -714,7 +737,7 @@ export default function Portfolio() {
                       whileTap={{ scale: 0.9 }}
                     >
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd"/>
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                       </svg>
                     </motion.a>
                     <motion.a
@@ -788,9 +811,9 @@ export default function Portfolio() {
             </div>
             <nav className="flex space-x-6">
               {navItems.map((item) => (
-                <a 
+                <a
                   key={item.id}
-                  href={`#${item.id}`} 
+                  href={`#${item.id}`}
                   className="text-gray-600 hover:text-orange-600 transition-colors font-medium"
                 >
                   {item.label}
@@ -817,7 +840,7 @@ export default function Portfolio() {
             whileTap={{ scale: 0.9 }}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
             </svg>
           </motion.button>
         )}
