@@ -709,14 +709,37 @@ export default function Portfolio() {
                       <p className="text-orange-600 text-sm font-medium">LinkedIn</p>
                       <span className="text-gray-700 font-medium text-sm">linkedin.com/in/sadhik-shaik-1878b8312</span>
                     </div>
+
+                    {/* Small LinkedIn redirect circle */}
+                    <a
+                      href="https://www.linkedin.com/in/sadhik-shaik-1878b8312"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-4 w-6 h-6 flex items-center justify-center rounded-full bg-green-300 text-black hover:bg-green-400 transition"
+                    >
+                      ↗
+                    </a>
                   </div>
-                  <div className="flex items-center">
+
+                  <div className="flex items-center mt-3">
                     <div className="bg-orange-100 p-2 rounded-lg mr-3 text-lg">🔗</div>
                     <div>
                       <p className="text-orange-600 text-sm font-medium">GitHub</p>
-                      <span className="text-gray-700 font-medium">github.com/shaiksadhik96</span>
+                      <span className="font-medium">https://github.com/shaiksadhik96</span>
                     </div>
+
+                    {/* Small GitHub redirect circle */}
+                    <a
+                      href="https://github.com/shaiksadhik96"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-4 w-6 h-6 flex items-center justify-center rounded-full bg-green-300 text-black hover:bg-green-400 transition"
+                    >
+                      ↗
+                    </a>
                   </div>
+
+
                 </div>
 
                 <div className="mt-8">
